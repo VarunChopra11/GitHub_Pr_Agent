@@ -11,7 +11,7 @@ class Config:
     AZURE_API_VERSION = "2024-08-01-preview"
 
     # Redis configuration
-    REDIS_URL = "redis://redis:6379/0"
+    REDIS_URL = os.getenv("REDIS_URL")
 
     # Celery configuration
     CELERY_BROKER_URL = REDIS_URL
